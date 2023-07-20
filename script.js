@@ -1,17 +1,11 @@
-// Використовуючи API https://jsonplaceholder.typicode.com/ зробити пошук поста за ід.
-// Ід має бути введений в інпут (валідація: ід від 1 до 100) Якщо знайдено пост, то вивести на сторінку блок з постом і зробити кнопку для отримання комкоментарів до посту.
-// Зробити завдання використовуючи проміси, перехопити помилки.
-
 const form = document.querySelector('#form');
 const input = document.querySelector('#input__number');
 const submit = document.querySelector('#submit');
-
 
 const promise = new Promise((resolve, reject) => {
     resolve(fetch(`https://jsonplaceholder.typicode.com/posts/`))
     
 })
-
 
 form.addEventListener('input', () => {
     
@@ -65,9 +59,3 @@ form.addEventListener('input', () => {
     }
 })
 
-
-Promise.allSettled([promise])
-    .then(values => {
-        const promise = values;
-        // console.log(values)
-    })

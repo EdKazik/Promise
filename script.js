@@ -25,7 +25,6 @@ form.addEventListener('input', () => {
                     document.querySelector('body').insertBefore(newDiv, document.querySelector('script'))
                     newDiv.appendChild(newP)
                     newDiv.appendChild(newP2)
-                    // console.log(json)
                     newP.textContent = `ID: ${json.id} `
                     newP2.textContent = `Title: ${json.title} `
 
